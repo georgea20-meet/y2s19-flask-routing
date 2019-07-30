@@ -5,6 +5,11 @@
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
 </head>
 <body>
+	<div>
     <h1>This is the page for the student with id {{ id_number }}.</h1>
+    <p>Your name is {{ student.name }}</p>
+    <p>Your are a Y{{ student.year }} student</p>
+    <p>{{student.finished_lab}}</p>
+    </div>
 </body>
 </html>

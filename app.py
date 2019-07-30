@@ -10,5 +10,10 @@ def home():
 def display_student(student_id):
 	return	render_template("home.html", id=student_id)
 
+@app.route('/student/<string:student_name>')
+def moreinfo(student_name):
+	student1 = query_by_name(student_name)
+	return render_template("student.html", student=student1)
+
 if __name__ == '__main__':
     app.run(debug=True)
